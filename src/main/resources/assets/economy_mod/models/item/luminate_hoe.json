@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "economy_mod:item/luminate_hoe"
+  }
+}

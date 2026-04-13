@@ -1,0 +1,46 @@
+{
+  "itemGroup.economy_mod": "Example Mod Tab",
+  "block.economy_mod.example_block": "Example Block",
+  "item.economy_mod.example_item": "Example Item",
+
+  "economy_mod.configuration.title": "Economy Mod Configs",
+  "economy_mod.configuration.section.economy_mod.common.toml": "Economy Mod Configs",
+  "economy_mod.configuration.section.economy_mod.common.toml.title": "Economy Mod Configs",
+  "economy_mod.configuration.items": "Item List",
+  "economy_mod.configuration.logDirtBlock": "Log Dirt Block",
+  "economy_mod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "economy_mod.configuration.magicNumber": "Magic Number",
+
+
+  "item.economy_mod.king_coin": "国王币",
+  "item.economy_mod.copper_coin": "铜币",
+  "item.economy_mod.iron_coin": "铁币",
+  "item.economy_mod.gold_coin": "金币",
+  "item.economy_mod.coins": "硬币堆",
+  "item.economy_mod.trust": "国王的信任",
+  "item.economy_mod.raw_luminate": "粗青珲",
+  "item.economy_mod.raw_mithril": "粗秘银",
+  "item.economy_mod.mithril_ingot": "青珲",
+  "item.economy_mod.luminate_ingot": "秘银",
+
+  "item.economy_mod.luminate_sword": "青珲剑",
+  "item.economy_mod.luminate_pickaxe": "青珲镐",
+  "item.economy_mod.luminate_axe": "青珲斧",
+  "item.economy_mod.luminate_hoe": "青珲锄",
+  "item.economy_mod.luminate_shovel": "青珲铲",
+
+  "item.economy_mod.citizen_dagger": "阿坎提亚短剑",
+
+  "block.economy_mod.luminate_ore": "青珲矿",
+  "block.economy_mod.mithril_ore": "秘银矿",
+
+  "item.economy_mod.rune_knight_helmet": "奥术骑士头盔",
+  "item.economy_mod.rune_knight_leggings": "奥术骑士护腿",
+  "item.economy_mod.rune_knight_boots": "奥术骑士战靴",
+  "item.economy_mod.rune_knight_chestplate": "奥术骑士胸甲",
+
+  "entity.minecraft.villager.economy_mod.monster_hunter": "怪物猎人",
+
+  "itemGroup.economy_tab": "尊我为王"
+
+}

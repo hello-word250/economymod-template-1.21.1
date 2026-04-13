@@ -1,0 +1,45 @@
+{
+  "itemGroup.economy_mod": "Example Mod Tab",
+  "block.economy_mod.example_block": "Example Block",
+  "item.economy_mod.example_item": "Example Item",
+
+  "economy_mod.configuration.title": "Economy Mod Configs",
+  "economy_mod.configuration.section.economy_mod.common.toml": "Economy Mod Configs",
+  "economy_mod.configuration.section.economy_mod.common.toml.title": "Economy Mod Configs",
+  "economy_mod.configuration.items": "Item List",
+  "economy_mod.configuration.logDirtBlock": "Log Dirt Block",
+  "economy_mod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "economy_mod.configuration.magicNumber": "Magic Number",
+
+  "item.economy_mod.king_coin": "coin of the kingdom",
+  "item.economy_mod.copper_coin": "copper coin",
+  "item.economy_mod.iron_coin": "iron coin",
+  "item.economy_mod.gold_coin": "gold coin",
+  "item.economy_mod.coins": "coins",
+  "item.economy_mod.trust": "TRUST of the KING",
+  "item.economy_mod.raw_luminate": "raw luminate",
+  "item.economy_mod.raw_mithril": "raw mithril",
+  "item.economy_mod.mithril_ingot": "mithril ingot",
+  "item.economy_mod.luminate_ingot": "luminate ingot",
+
+  "item.economy_mod.luminate_sword": "luminate sword",
+  "item.economy_mod.luminate_pickaxe": "luminate pickaxe",
+  "item.economy_mod.luminate_axe": "luminate axe",
+  "item.economy_mod.luminate_hoe": "luminate hoe",
+  "item.economy_mod.luminate_shovel": "luminate shovel",
+
+  "item.economy_mod.citizen_dagger": "citizen dagger",
+
+  "block.economy_mod.luminate_ore": "luminate ore",
+  "block.economy_mod.mithril_ore": "mithril ore",
+  "block.economy_mod.luminate_light": "luminate light",
+
+  "item.economy_mod.rune_knight_helmet": "rune knight helmet",
+  "item.economy_mod.rune_knight_leggings": "rune knight leggings",
+  "item.economy_mod.rune_knight_boots": "rune knight boots",
+  "item.economy_mod.rune_knight_chestplate": "rune knight chestplate",
+
+  "entity.minecraft.villager.economy_mod.monster_hunter": "monster hunter",
+
+  "itemGroup.economy_tab": "KINGDOM"
+}

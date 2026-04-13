@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "economy_mod:block/luminate_light_off"
+    },
+    "clicked=true": {
+      "model": "economy_mod:block/luminate_light_on"
+    }
+  }
+}

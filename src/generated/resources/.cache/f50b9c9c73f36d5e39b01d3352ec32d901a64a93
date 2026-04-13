@@ -1,0 +1,4 @@
+// 1.21.1	2026-01-30T11:04:25.3066064	Tags for minecraft:block mod id economy_mod
+a3a59205d971bab729b2811a9cc7d7ae00db1dba data/minecraft/tags/block/mineable/pickaxe.json
+3f07dcc73c93a6a57d08684dc65e942eceddbb55 data/minecraft/tags/block/needs_diamond_tool.json
+5d9606931d3bfd8f4eb4d54db8dd265d7421a3b9 data/minecraft/tags/block/needs_iron_tool.json

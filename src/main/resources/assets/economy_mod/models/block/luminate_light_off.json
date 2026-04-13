@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "economy_mod:block/luminate_light_off"
+  }
+}

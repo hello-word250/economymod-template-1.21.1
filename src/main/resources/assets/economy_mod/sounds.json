@@ -1,0 +1,32 @@
+{
+  "luminate_place": {
+    "subtitle": "sounds.economy_mod.luminate_place",
+    "sounds": [
+      "economy_mod:luminate_place"
+    ]
+  },
+  "luminate_hit": {
+    "subtitle": "sounds.economy_mod.luminate_hit",
+    "sounds": [
+      "economy_mod:luminate_hit"
+    ]
+  },
+  "luminate_break": {
+    "subtitle": "sounds.economy_mod.luminate_break",
+    "sounds": [
+      "economy_mod:luminate_break"
+    ]
+  },
+  "luminate_step": {
+    "subtitle": "sounds.economy_mod.luminate_step",
+    "sounds": [
+      "economy_mod:luminate_step"
+    ]
+  },
+  "luminate_fall": {
+    "subtitle": "sounds.economy_mod.luminate_fall",
+    "sounds": [
+      "economy_mod:luminate_fall"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "economy_mod:block/mithril_ore"
+    }
+  }
+}
