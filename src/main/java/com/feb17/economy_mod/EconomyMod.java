@@ -1,10 +1,14 @@
 package com.feb17.economy_mod;
 
 import com.feb17.economy_mod.block.ModBlocks;
+import com.feb17.economy_mod.playerclass.commands.ClassCommands;
 import com.feb17.economy_mod.item.ModCreativeItemTag;
 import com.feb17.economy_mod.item.ModItmes;
+import com.feb17.economy_mod.playerclass.player.ClassManager;
 import com.feb17.economy_mod.sound.ModSounds;
 import com.feb17.economy_mod.villager.ModVillager;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -123,5 +127,16 @@ public class EconomyMod {
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+    // 注册阶级指令
+    @SubscribeEvent
+    public void onRegisterCommands(RegisterCommandsEvent event) {
+        ClassCommands.register(event.getDispatcher());
+    }
+
+    // 玩家登录时初始化阶级数据
+    @SubscribeEvent
+    public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
+        ClassManager.initPlayerClass(event.getEntity());
     }
 }
