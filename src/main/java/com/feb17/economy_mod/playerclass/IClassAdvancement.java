@@ -1,6 +1,5 @@
-package com.feb17.economy_mod.playerclass.advancement;
+package com.feb17.economy_mod.playerclass;
 
-import com.feb17.economy_mod.playerclass.player.PlayerClass;
 import net.minecraft.world.entity.player.Player;
 
 // 阶级进阶接口，后续可实现NPC交互/货币进阶逻辑

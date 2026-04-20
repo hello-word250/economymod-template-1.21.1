@@ -1,11 +1,11 @@
-package com.feb17.economy_mod.playerclass.player;
+package com.feb17.economy_mod.playerclass;
 
 // 四个阶级的枚举，后续可自定义命名（比如Peasant/Merchant/Noble/Lord）
 public enum PlayerClass {
-    CLASS_1("阶级1", 0),
-    CLASS_2("阶级2", 1),
-    CLASS_3("阶级3", 2),
-    CLASS_4("阶级4", 3);
+    CLASS_1("灰烬民", 0),
+    CLASS_2("契约者", 1),
+    CLASS_3("奥术领主", 2),
+    CLASS_4("无冠候主", 3);
 
     private final String displayName;
     private final int tier;

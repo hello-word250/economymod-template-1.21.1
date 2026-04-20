@@ -1,8 +1,10 @@
 package com.feb17.economy_mod.event;
 
 import com.feb17.economy_mod.EconomyMod;
+import com.feb17.economy_mod.claim.ClaimManager;
 import com.feb17.economy_mod.item.HammerItem;
 import com.feb17.economy_mod.item.ModItmes;
+import com.feb17.economy_mod.loyalty.LoyaltyManager;
 import com.feb17.economy_mod.villager.ModVillager;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
@@ -20,8 +22,8 @@ import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
@@ -62,7 +64,7 @@ public class ModEvents {
     //.Pre意味着在伤害之前触发的事件
     @SubscribeEvent
     public static Void livingDamage(LivingDamageEvent.Pre event) {
-        if (event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
+        if (event.getEntity() instanceof Sheep && event.getSource().getDirectEntity() instanceof Player player) {
             if (player.getMainHandItem().getItem() == ModItmes.CITIZEN_DAGGER.get()) {
                 player.sendSystemMessage(Component.literal(player.getName().getString() + "啊，我操了"));
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300, 3));
@@ -146,6 +148,36 @@ public class ModEvents {
         return null;
     }
 
+    //右键交互loyalty
+    @SubscribeEvent
+    public static void onRightClickTrustItem(PlayerInteractEvent.RightClickItem event) {
+        var player = event.getEntity();
+        var hand = event.getHand();
+
+        // 只处理右手、只在服务端运行
+        if (hand != InteractionHand.MAIN_HAND) return;
+        if (player.level().isClientSide()) return;
+
+        var stack = player.getMainHandItem();
+        if (stack.is(ModItmes.TRUST.get())) {
+            // 加10忠诚（自动限制 -100 ~ 100）
+            LoyaltyManager.addLoyalty(player, 1);
+            int current = LoyaltyManager.getLoyalty(player);
+
+            player.sendSystemMessage(Component.literal("§a忠诚值 +1 → " + current));//系统文本信息
+            player.getCooldowns().addCooldown(stack.getItem(), 10);//冷却
+        }
+    }
+
+    // 玩家登录时初始化忠诚度
+    @SubscribeEvent
+    public static void onPlayerLoginInitLoyalty(PlayerEvent.PlayerLoggedInEvent event) {
+        var player = event.getEntity();
+        // 确保数据存在，默认0
+        LoyaltyManager.setLoyalty(player, LoyaltyManager.getLoyalty(player));
+    }
+
+    //村民交易
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
         if (event.getType() == VillagerProfession.FARMER) {
@@ -167,6 +199,39 @@ public class ModEvents {
                             new ItemCost(ModItmes.GOLD_COIN, 3),
                             new ItemStack(ModItmes.CITIZEN_DAGGER.get(), 1), 6, 3, 0.05f
                     ));
+        }
+    }
+
+    //阻止破坏
+    @SubscribeEvent
+    public static void onBlockBreak(BlockEvent.BreakEvent event) {
+        Player player = event.getPlayer();
+        if (event.getLevel().isClientSide()) return;
+        if (!ClaimManager.canInteract(player, event.getPos(), player.level())) {
+            event.setCanceled(true);
+            player.sendSystemMessage(Component.literal("§c你没有权限操作此领地"));
+        }
+    }
+
+    // 阻止放置
+    @SubscribeEvent
+    public static void onBlockPlace(BlockEvent.EntityPlaceEvent event) {
+        if (event.getLevel().isClientSide()) return;
+        if (!(event.getEntity() instanceof Player player)) return;
+        if (!ClaimManager.canInteract(player, event.getPos(), player.level())) {
+            event.setCanceled(true);
+            player.sendSystemMessage(Component.literal("§c你没有权限操作此领地"));
+        }
+    }
+
+    // 阻止交互（箱子、门、按钮、床等）
+    @SubscribeEvent
+    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+        Player player = event.getEntity();
+        if (event.getLevel().isClientSide()) return;
+        if (!ClaimManager.canInteract(player, event.getPos(), player.level())) {
+            event.setCanceled(true);
+            player.sendSystemMessage(Component.literal("§c你没有权限操作此领地"));
         }
     }
 

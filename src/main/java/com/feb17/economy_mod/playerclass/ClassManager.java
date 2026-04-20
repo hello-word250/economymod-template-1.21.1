@@ -1,6 +1,5 @@
-package com.feb17.economy_mod.playerclass.player;
+package com.feb17.economy_mod.playerclass;
 
-import com.feb17.economy_mod.playerclass.advancement.IClassAdvancement;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;

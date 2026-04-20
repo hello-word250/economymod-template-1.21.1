@@ -1,10 +1,12 @@
 package com.feb17.economy_mod;
 
 import com.feb17.economy_mod.block.ModBlocks;
-import com.feb17.economy_mod.playerclass.commands.ClassCommands;
+import com.feb17.economy_mod.claim.ClaimCommands;
+import com.feb17.economy_mod.loyalty.LoyaltyCommands;
+import com.feb17.economy_mod.playerclass.ClassCommands;
 import com.feb17.economy_mod.item.ModCreativeItemTag;
 import com.feb17.economy_mod.item.ModItmes;
-import com.feb17.economy_mod.playerclass.player.ClassManager;
+import com.feb17.economy_mod.playerclass.ClassManager;
 import com.feb17.economy_mod.sound.ModSounds;
 import com.feb17.economy_mod.villager.ModVillager;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
@@ -128,15 +130,19 @@ public class EconomyMod {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
-    // 注册阶级指令
-    @SubscribeEvent
-    public void onRegisterCommands(RegisterCommandsEvent event) {
-        ClassCommands.register(event.getDispatcher());
-    }
 
     // 玩家登录时初始化阶级数据
     @SubscribeEvent
     public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
         ClassManager.initPlayerClass(event.getEntity());
     }
+
+    //注册指令
+    @SubscribeEvent
+    public void registerCommands(RegisterCommandsEvent event) {
+        LoyaltyCommands.register(event.getDispatcher());
+        ClaimCommands.register(event.getDispatcher());
+        ClassCommands.register(event.getDispatcher());
+    }
+
 }

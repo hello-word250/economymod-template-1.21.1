@@ -1,10 +1,8 @@
-package com.feb17.economy_mod.playerclass.commands;
+package com.feb17.economy_mod.playerclass;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
-import com.feb17.economy_mod.playerclass.player.ClassManager;
-import com.feb17.economy_mod.playerclass.player.PlayerClass;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
@@ -33,7 +31,7 @@ public class ClassCommands {
         CommandSourceStack source = context.getSource();
         if (source.getEntity() instanceof ServerPlayer player) {
             PlayerClass playerClass = ClassManager.getPlayerClass(player);
-            source.sendSuccess(() -> Component.literal("当前阶级：" + playerClass.getDisplayName()), false);
+            source.sendSuccess(() -> Component.literal("汝为：" + playerClass.getDisplayName()), false);
         } else {
             source.sendFailure(Component.literal("仅玩家可执行此指令！"));
         }
@@ -50,7 +48,7 @@ public class ClassCommands {
             if (oldClass == newClass) {
                 source.sendSuccess(() -> Component.literal("已达到最高阶级！"), false);
             } else {
-                source.sendSuccess(() -> Component.literal("进阶成功！当前阶级：" + newClass.getDisplayName()), false);
+                source.sendSuccess(() -> Component.literal("烙印加深！你已蜕变为：" + newClass.getDisplayName()), false);
             }
         } else {
             source.sendFailure(Component.literal("仅玩家可执行此指令！"));
