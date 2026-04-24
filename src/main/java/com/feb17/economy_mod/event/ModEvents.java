@@ -1,10 +1,10 @@
 package com.feb17.economy_mod.event;
 
 import com.feb17.economy_mod.EconomyMod;
-import com.feb17.economy_mod.claim.ClaimManager;
+import com.feb17.economy_mod.dominion.claim.ClaimManager;
 import com.feb17.economy_mod.item.HammerItem;
 import com.feb17.economy_mod.item.ModItmes;
-import com.feb17.economy_mod.loyalty.LoyaltyManager;
+import com.feb17.economy_mod.dominion.loyalty.LoyaltyManager;
 import com.feb17.economy_mod.villager.ModVillager;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;

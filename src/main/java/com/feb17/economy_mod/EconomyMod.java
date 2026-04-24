@@ -1,12 +1,12 @@
 package com.feb17.economy_mod;
 
 import com.feb17.economy_mod.block.ModBlocks;
-import com.feb17.economy_mod.claim.ClaimCommands;
-import com.feb17.economy_mod.loyalty.LoyaltyCommands;
-import com.feb17.economy_mod.playerclass.ClassCommands;
+import com.feb17.economy_mod.dominion.claim.ClaimCommands;
+import com.feb17.economy_mod.dominion.loyalty.LoyaltyCommands;
+import com.feb17.economy_mod.dominion.playerclass.ClassCommands;
 import com.feb17.economy_mod.item.ModCreativeItemTag;
 import com.feb17.economy_mod.item.ModItmes;
-import com.feb17.economy_mod.playerclass.ClassManager;
+import com.feb17.economy_mod.dominion.playerclass.ClassManager;
 import com.feb17.economy_mod.sound.ModSounds;
 import com.feb17.economy_mod.villager.ModVillager;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;

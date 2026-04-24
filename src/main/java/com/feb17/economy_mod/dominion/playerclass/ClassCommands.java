@@ -1,4 +1,4 @@
-package com.feb17.economy_mod.playerclass;
+package com.feb17.economy_mod.dominion.playerclass;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;

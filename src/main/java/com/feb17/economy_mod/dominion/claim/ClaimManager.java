@@ -1,7 +1,7 @@
-package com.feb17.economy_mod.claim;
+package com.feb17.economy_mod.dominion.claim;
 
-import com.feb17.economy_mod.playerclass.ClassManager;
-import com.feb17.economy_mod.playerclass.PlayerClass;
+import com.feb17.economy_mod.dominion.playerclass.ClassManager;
+import com.feb17.economy_mod.dominion.playerclass.PlayerClass;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;

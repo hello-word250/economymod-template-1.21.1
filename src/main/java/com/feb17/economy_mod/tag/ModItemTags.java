@@ -12,4 +12,5 @@ public class ModItemTags {
     private static TagKey<Item> bind(String name) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(EconomyMod.MODID,name));
     }
+
 }

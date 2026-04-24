@@ -1,4 +1,4 @@
-package com.feb17.economy_mod.playerclass;
+package com.feb17.economy_mod.dominion.playerclass;
 
 // 四个阶级的枚举，后续可自定义命名（比如Peasant/Merchant/Noble/Lord）
 public enum PlayerClass {

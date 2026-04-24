@@ -1,4 +1,4 @@
-package com.feb17.economy_mod.claim;
+package com.feb17.economy_mod.dominion.claim;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;

@@ -1,4 +1,4 @@
-package com.feb17.economy_mod.loyalty;
+package com.feb17.economy_mod.dominion.loyalty;
 
 import net.minecraft.nbt.CompoundTag;
 

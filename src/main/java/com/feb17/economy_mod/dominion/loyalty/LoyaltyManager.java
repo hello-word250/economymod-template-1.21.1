@@ -1,10 +1,10 @@
-package com.feb17.economy_mod.loyalty;
+package com.feb17.economy_mod.dominion.loyalty;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
-import com.feb17.economy_mod.playerclass.ClassManager;
-import com.feb17.economy_mod.playerclass.PlayerClass;
+import com.feb17.economy_mod.dominion.playerclass.ClassManager;
+import com.feb17.economy_mod.dominion.playerclass.PlayerClass;
 
 // 全局调用入口：所有地方都用这个类操作忠诚度
 public class LoyaltyManager {
