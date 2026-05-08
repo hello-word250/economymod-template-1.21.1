@@ -31,6 +31,7 @@ public class ModCreativeItemTag {
                         output.accept(ModItmes.RAW_MITHRIL);
                         output.accept(ModBlocks.LUMINATE_ORE);
                         output.accept(ModBlocks.MITHRIL_ORE);
+                        output.accept(ModBlocks.TRADING);
                         output.accept(ModItmes.MITHRIL_INGOT);
                         output.accept(ModItmes.LUMINATE_INGOT);
 

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "economy_mod:block/trading_down",
+    "east": "economy_mod:block/trading_east",
+    "north": "economy_mod:block/trading_east",
+    "particle": "economy_mod:block/trading_west",
+    "south": "economy_mod:block/trading_west",
+    "up": "economy_mod:block/trading_top",
+    "west": "economy_mod:block/trading_west"
+  }
+}

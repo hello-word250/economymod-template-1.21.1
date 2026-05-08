@@ -22,9 +22,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         //example
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.LUMINATE_ORE.get())
-                .add(ModBlocks.MITHRIL_ORE.get());
+                .add(ModBlocks.MITHRIL_ORE.get())
+                .add(ModBlocks.TRADING.get());
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.LUMINATE_ORE.get());
+                .add(ModBlocks.LUMINATE_ORE.get())
+                .add(ModBlocks.TRADING.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.MITHRIL_ORE.get());
 

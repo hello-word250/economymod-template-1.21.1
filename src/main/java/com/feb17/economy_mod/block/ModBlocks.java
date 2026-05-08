@@ -32,6 +32,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MAGIC_ORE =
             registerBlcoks("magic_ore",()-> new Block(BlockBehaviour.Properties.of()
                     .strength(10F,600.0F)));
+    public static final DeferredBlock<Block> TRADING =
+            registerBlcoks("trading",()-> new Block(BlockBehaviour.Properties.of()
+                    .strength(2.5F,100.0F)));
 
     public static final DeferredBlock<Block> LUMINATE_LIGHT =
             registerBlcoks("luminate_light.json",()-> new LuminateLight(BlockBehaviour.Properties.of()
