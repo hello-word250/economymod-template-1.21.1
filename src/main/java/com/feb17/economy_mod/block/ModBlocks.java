@@ -2,14 +2,17 @@ package com.feb17.economy_mod.block;
 
 import com.feb17.economy_mod.EconomyMod;
 import com.feb17.economy_mod.block.custom.LuminateLight;
+import com.feb17.economy_mod.block.custom.TuberCrop;
 import com.feb17.economy_mod.item.ModItmes;
 import com.feb17.economy_mod.sound.ModSounds;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -42,7 +45,8 @@ public class ModBlocks {
                     .sound(ModSounds.LUMINATE_SOUNDS)));
 
 
-
+    public static final DeferredHolder<Block, TuberCrop> TUBER_CROP =
+            BLOCKS.register("strawberry_crop", () -> new TuberCrop(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
     private static <T extends Block> void registerBlockItems(String name, DeferredBlock<T> block){
         ModItmes.ITEMS.register(name,()->new BlockItem(block.get(), new Item.Properties()));
     }

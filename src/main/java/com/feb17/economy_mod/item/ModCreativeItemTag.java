@@ -35,6 +35,17 @@ public class ModCreativeItemTag {
                         output.accept(ModItmes.MITHRIL_INGOT);
                         output.accept(ModItmes.LUMINATE_INGOT);
 
+                        output.accept(ModItmes.MOSS);
+                        output.accept(ModItmes.SUNDRIED_TOBACCO_POWDER);
+                        output.accept(ModItmes.SUNDRIED_TOBACCO);
+                        output.accept(ModItmes.MOSS_POWDER);
+                        output.accept(ModItmes.TOBACCO);
+                        output.accept(ModItmes.SLEEP_THISTLE);
+                        output.accept(ModItmes.SLEEP_THISTLE_POWDER);
+                        output.accept(ModItmes.TOUGH_THISTLE);
+                        output.accept(ModItmes.TUBER);
+                        output.accept(ModItmes.TUBER_POWDER);
+
                         output.accept(ModItmes.LUMINATE_SWORD);
                         output.accept(ModItmes.LUMINATE_AXE);
                         output.accept(ModItmes.LUMINATE_HOE);

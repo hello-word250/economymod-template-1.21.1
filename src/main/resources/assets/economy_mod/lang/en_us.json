@@ -38,7 +38,17 @@
   "item.economy_mod.rune_knight_helmet": "rune knight helmet",
   "item.economy_mod.rune_knight_leggings": "rune knight leggings",
   "item.economy_mod.rune_knight_boots": "rune knight boots",
-  "item.economy_mod.rune_knight_chestplate": "rune knight chestplate",
+
+  "item.economy_mod.moss": "moss",
+  "item.economy_mod.moss_powder": "moss powder",
+  "item.economy_mod.sleep_thistle": "sleep thistle",
+  "item.economy_mod.sleep_thistle_powder": "sleep thistle powder",
+  "item.economy_mod.tough_thistle": "tough thistle",
+  "item.economy_mod.sundried_tobacco": "sundried tobacco",
+  "item.economy_mod.tobacco": "tobacco",
+  "item.economy_mod.sundried_tobacco_powder": "sundried tobacco powder",
+  "item.economy_mod.tuber": "tuber",
+  "item.economy_mod.tuber_powder": "tuber powder",
 
   "entity.minecraft.villager.economy_mod.monster_hunter": "monster hunter",
 

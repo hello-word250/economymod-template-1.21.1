@@ -33,6 +33,27 @@ public class ModItmes {
             ITEMS.register("raw_mithril" , ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MITHRIL_INGOT =
             ITEMS.register("mithril_ingot" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MOSS =
+            ITEMS.register("moss" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MOSS_POWDER =
+            ITEMS.register("moss_powder" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SLEEP_THISTLE =
+            ITEMS.register("sleep_thistle" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SLEEP_THISTLE_POWDER =
+            ITEMS.register("sleep_thistle_powder" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SUNDRIED_TOBACCO =
+            ITEMS.register("sundried_tobacco" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SUNDRIED_TOBACCO_POWDER =
+            ITEMS.register("sundried_tobacco_powder" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TOBACCO =
+            ITEMS.register("tobacco" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TOUGH_THISTLE =
+            ITEMS.register("tough_thistle" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TUBER =
+            ITEMS.register("tuber" , ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TUBER_POWDER =
+            ITEMS.register("tuber_powder" , ()-> new Item(new Item.Properties()));
+
 
     //定义自定义等级的工具
     public static final DeferredItem<SwordItem> LUMINATE_SWORD = ITEMS.register("luminate_sword",
