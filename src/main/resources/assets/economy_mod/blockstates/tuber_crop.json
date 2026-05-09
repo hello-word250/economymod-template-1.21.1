@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "economy_mod:block/tuber_crop_stage0"
+    },
+    "age=1": {
+      "model": "economy_mod:block/tuber_crop_stage1"
+    },
+    "age=2": {
+      "model": "economy_mod:block/tuber_crop_stage2"
+    },
+    "age=3": {
+      "model": "economy_mod:block/tuber_crop_stage3"
+    },
+    "age=4": {
+      "model": "economy_mod:block/tuber_crop_stage4"
+    },
+    "age=5": {
+      "model": "economy_mod:block/tuber_crop_stage5"
+    }
+  }
+}
