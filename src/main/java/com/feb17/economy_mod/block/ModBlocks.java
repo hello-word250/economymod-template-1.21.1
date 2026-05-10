@@ -46,7 +46,7 @@ public class ModBlocks {
 
 
     public static final DeferredHolder<Block, TuberCrop> TUBER_CROP =
-            BLOCKS.register("strawberry_crop", () -> new TuberCrop(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+            BLOCKS.register("tuber_crop", () -> new TuberCrop(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
     private static <T extends Block> void registerBlockItems(String name, DeferredBlock<T> block){
         ModItmes.ITEMS.register(name,()->new BlockItem(block.get(), new Item.Properties()));
     }

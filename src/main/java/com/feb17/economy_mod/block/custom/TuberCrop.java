@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class TuberCrop extends CropBlock {
     public static final MapCodec<TuberCrop> CODEC = simpleCodec(TuberCrop::new);
-    public static final int MAX_AGE = 7;
+    public static final int MAX_AGE = 5;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
 
     public TuberCrop (Properties properties){

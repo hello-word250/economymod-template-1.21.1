@@ -1,6 +1,7 @@
 package com.feb17.economy_mod.item;
 
 import com.feb17.economy_mod.EconomyMod;
+import com.feb17.economy_mod.block.ModBlocks;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -49,10 +50,11 @@ public class ModItmes {
             ITEMS.register("tobacco" , ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TOUGH_THISTLE =
             ITEMS.register("tough_thistle" , ()-> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> TUBER =
-            ITEMS.register("tuber" , ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TUBER_POWDER =
             ITEMS.register("tuber_powder" , ()-> new Item(new Item.Properties()));
+    //种子注册写法
+    public static final DeferredItem<Item> TUBER =
+            ITEMS.register("tuber" , ()-> new ItemNameBlockItem(ModBlocks.TUBER_CROP.get(), new Item.Properties()));
 
 
     //定义自定义等级的工具
